@@ -298,7 +298,7 @@
     padding-top: 80px;
 }
 
-/* Universal Mobile Fix for All Devices */
+/* Universal Mobile Fix for All Devices - IMAGE FIRST */
 @media (max-width: 991px) {
     .hero-section {
         min-height: auto;
@@ -315,21 +315,21 @@
         align-items: flex-start !important;
     }
     
-    /* Force column reverse layout on mobile */
+    /* IMAGE FIRST layout */
     .hero-section .row {
-        flex-direction: column-reverse !important;
+        flex-direction: column !important;
     }
     
-    /* Content column adjustments */
-    .hero-section .col-lg-8 {
-        order: 2;
-        margin-bottom: 1.5rem;
-    }
-    
-    /* Image column adjustments */
+    /* Image column adjustments - COMES FIRST */
     .hero-section .col-lg-4 {
         order: 1;
         margin-bottom: 2rem;
+    }
+    
+    /* Content column adjustments - COMES SECOND */
+    .hero-section .col-lg-8 {
+        order: 2;
+        margin-bottom: 1rem;
     }
     
     .hero-image {
